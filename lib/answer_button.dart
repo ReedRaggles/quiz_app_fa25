@@ -15,22 +15,22 @@ class AnswerButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 3, 1, 4),
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 40,
-           vertical: 10
-           ), ),
-
+          backgroundColor: const Color.fromARGB(255, 3, 1, 95),
+          foregroundColor: Colors.white,
+          padding: const EdgeInsets.symmetric(
+            vertical: 10,
+            horizontal: 40,
+          )
+          // shape: const BeveledRectangleBorder(),
+          ),
       child: Text(
         answerText,
-      textAlign: TextAlign.center,
-      style: GoogleFonts.lato(
-        color: Colors.white,
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-
-      ),
+        textAlign: TextAlign.center,
+        style: GoogleFonts.lato(
+          color: Colors.white,
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
