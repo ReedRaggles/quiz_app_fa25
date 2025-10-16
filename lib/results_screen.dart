@@ -39,7 +39,7 @@ Widget build(Context)
           ),
           QuestionsSummary(summaryData: getSummaryData()),
           const SizedBox(
-            height: 30,
+            height: 40,
           ),
           TextButton(
             onPressed: () {},
