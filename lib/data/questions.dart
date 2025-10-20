@@ -49,10 +49,10 @@ QuizQuestion(
 QuizQuestion(
   "Who is NOT an attack unit?",
   [
-    "Hugo Vlad",
+    "Hoshimi Miyabi",
     "Seed",
     "Orphie",
-    "Hoshimi Miyabi",
+    "Hugo Vlad",
   ],
 ),
 

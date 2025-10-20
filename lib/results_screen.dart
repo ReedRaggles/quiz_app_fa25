@@ -17,6 +17,7 @@ List<Map<String,Object>> getSummaryData(){
         'question' :questions[i].text,
         'correct_answer':questions[i].answers[0],
         'user_answer': chosenAnswers[i],
+        'is_correct': chosenAnswers[i] == questions[i].answers[0],
       }
     );
   }
@@ -27,13 +28,14 @@ List<Map<String,Object>> getSummaryData(){
 Widget build(Context)
 {
   return SizedBox(
+    
     width: double.infinity,
     child: Container(
       margin: const EdgeInsets.all(40),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('You answered X out of Y questions Correctly'),
+          const Text('You answered X out of Y questions Correctly'),         
           const SizedBox(
             height: 30,
           ),
