@@ -26,6 +26,34 @@ const questions = [
       "Manato is ice",
       "Manato isn't from the same faction",
       "Lighter does get the full usage",
-    ]
-  )
+    ],
+  ),
+  QuizQuestion(
+    "What is Rina's full name in Zenless Zone Zero?",
+    [
+      "Alexandrina Sebastiane",
+      "Rina Forger",
+      "Sebastrina Victoria",
+      "Andrina Catherine",
+    ],
+  ),
+QuizQuestion(
+  "Who is NOT a member of pubsec in Zenless Zone Zero?",
+  [
+    "Hoshimi Miyabi",
+    "Jane Doe",
+    "Seth Lowell",
+    "Zhu Yuan",
+  ],
+),
+QuizQuestion(
+  "Who is NOT an attack unit?",
+  [
+    "Hugo Vlad",
+    "Seed",
+    "Orphie",
+    "Hoshimi Miyabi",
+  ],
+),
+
 ];

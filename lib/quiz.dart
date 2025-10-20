@@ -24,6 +24,7 @@ class _QuizState extends State<Quiz> {
         //selectedAnswers = [];
         activeScreen = ResultsScreen(
           chosenAnswers: selectedAnswers,
+          onRestart: restartQuiz,
         );
       });
     }
@@ -42,6 +43,12 @@ class _QuizState extends State<Quiz> {
       );
     });
   }
+void restartQuiz() {
+  setState(() {
+    selectedAnswers = [];
+    activeScreen = StartScreen(switchScreen);
+  });
+}
 
   @override
   Widget build(BuildContext context) {
