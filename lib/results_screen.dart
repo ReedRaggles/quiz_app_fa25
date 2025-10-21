@@ -27,6 +27,14 @@ List<Map<String,Object>> getSummaryData(){
 @override
 Widget build(Context)
 {
+ final summaryData = getSummaryData(); 
+
+  final numTotalQuestions = questions.length;
+  final numCorrectQuestions = summaryData.where(
+    (data){
+      return data['correct_answer'] == data['user_answer'];
+    }
+  ).length;
   return SizedBox(
     
     width: double.infinity,
@@ -35,7 +43,13 @@ Widget build(Context)
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('You answered X out of Y questions Correctly'),         
+          Text('You got $numCorrectQuestions out of $numTotalQuestions Correct!',
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+          ),         
           const SizedBox(
             height: 30,
           ),
@@ -43,10 +57,16 @@ Widget build(Context)
           const SizedBox(
             height: 40,
           ),
-          TextButton(
-            onPressed: onRestart,
-            child: const Text('Restart Quiz'),
-          ),
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
+            child: ElevatedButton(
+              onPressed: onRestart,
+            child: Text("Restart Quiz"),
+            ),
+          )
         ],
       ),
     ),
